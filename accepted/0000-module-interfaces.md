@@ -14,9 +14,9 @@ A new feature allowing module authors to declare higher-risk Node.JS and browser
 
 > There’s no shortage of smart, nasty people out there, and 580,000 npm packages. It seems to me that the odds are better than even that at least one of those packages has some malicious code in it, and that if it’s done well, you would never even know.
 
-[David Gilbertson's article](https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5) highlighted a widespread anxiety among developers that it can be hard to know what the npm modules in your codebase are actually doing. The post posited (albeit fictiously) that the author had created a package that sends sensitive data to their server for malicious uses, posing as a package for formatting console messages.
+[David Gilbertson's article](https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5) highlighted a widespread anxiety among developers that it can be hard to know what the npm modules in your codebase are actually doing. The post posited (albeit fictitiously) that the author had created a package that sends sensitive data to their server for malicious uses, posing as a package for formatting console messages.
 
-The fictious package gathers data from forms (using `document.forms`), cookies (`document.cookies`) and posts it to the server using `EventSource`. Use of these interfaces by such a module would normally be unthinkable. Surfacing this information to developers could ease their anxiety and allow them to make informed decisions when choosing a module to install.
+The fictitious package gathers data from forms (using `document.forms`), cookies (`document.cookies`) and posts it to the server using `EventSource`. Use of these interfaces by such a module would normally be unthinkable. Surfacing this information to developers could ease their anxiety and allow them to make informed decisions when choosing a module to install.
 
 ## Detailed Explanation
 
@@ -77,7 +77,7 @@ This could potentially be addressed by creating visitors to identify expressions
 Detection of obfuscated code may be an unnecessary feature if it can be detected by linters such as [ESLint](https://eslint.org/). This may be desirable if it is decided that detecting obfuscated code is too big a problem for auditing to solve.
 
 ### Alternatives to babel
-[babel-cli](https://www.npmjs.com/package/babel-cli), used by the proof-of-concept, is a heavyweight dependency at 23Mb in size. This feature could be implemented with an alternative, lighter-weight parser.
+[babel-cli](https://www.npmjs.com/package/babel-cli), used by the proof-of-concept, is a heavyweight dependency at 23 Mb in size. This feature could be implemented with an alternative, lighter-weight parser.
 
 ## Prior Art
 
