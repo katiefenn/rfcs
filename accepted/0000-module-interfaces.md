@@ -32,7 +32,7 @@ Interfaces are declared by package authors in the `package.json` file using a ne
 }
 ```
 
-A new npm feature, similar to `npm audit`, could then be used by the end user to verify any dependencies with named interfaces complies. Any dependencies using interfaces not named in their package.json will be reported to the end user.
+A new npm feature, similar to `npm audit`, could then be used by the end user to verify that each dependency complies with its named interfaces. Any dependencies using interfaces not named in their package.json will be reported to the end user.
 
 Interfaces could also be listed on the [npmjs.com](http://npmjs.com) website to surface this information to users selecting packages to install into their projects. Other parties might also be interested in consuming this information. [webpack](https://webpack.js.org/) may be interested in using named interfaces to transcode calls to high-risk APIs at build-time to control their usage.
 
