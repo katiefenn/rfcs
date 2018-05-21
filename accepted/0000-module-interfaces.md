@@ -66,7 +66,7 @@ The proof of concept exits with exit status 1 if such calls are found. Further w
 
 ### Auditing obfuscated code
 
-Obfuscated calls to risky APIs poses a problem for an auditing feature. For example, take the following expression:
+Obfuscated calls to risky APIs pose a problem for an auditing feature. For example, take the following expression:
 
 `window['YMLHttpRequest'.replace('Y', 'X')]`
 
