@@ -70,7 +70,7 @@ Obfuscated calls to risky APIs pose a problem for an auditing feature. For examp
 
 `window['YMLHttpRequest'.replace('Y', 'X')]`
 
-This expression accesses the `XMLHttpRequest` API without explicitly referencing it by its name in code. We can expect more elaborate attempts by publishers to circumvent auditing to provide false assurances to users installing their modules. Framing this feature as a cast-iron assurance to users may result in arms-race with ill-meaning publishers as new ways of defeating the auditing process are discovered.
+This expression accesses the `XMLHttpRequest` API without explicitly referencing it by its name in code. We can expect more elaborate attempts to circumvent auditing to provide false assurances to users. Framing this feature as a cast-iron assurance to users may result in arms-race with ill-meaning publishers as new ways of defeating the auditing process are discovered.
 
 This could potentially be addressed by creating visitors to identify expressions dynamically accessing members of the `window` object. The proof of concept includes visitors to find member expressions that include non-string property nodes, as seen in the above example (n.b. `'YMLHttpRequest'.replace('Y', 'X')` evaluates to a string in JS, but it is considered a `CallExpression` by babel).
 
