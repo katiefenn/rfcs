@@ -14,7 +14,7 @@ A new feature allowing module authors to declare higher-risk Node.JS and browser
 
 > There’s no shortage of smart, nasty people out there, and 580,000 npm packages. It seems to me that the odds are better than even that at least one of those packages has some malicious code in it, and that if it’s done well, you would never even know.
 
-[David Gilbertson's article](https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5) highlighted a widespread anxiety among developers that it can be hard to know what the npm modules in your codebase are actually doing. The post posited (albeit fictiously) that the author had created an npm package for formatting console messages, but in reality sent sensitive data to sends it to their server for malicious uses.
+[David Gilbertson's article](https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5) highlighted a widespread anxiety among developers that it can be hard to know what the npm modules in your codebase are actually doing. The post posited (albeit fictiously) that the author had created a package that sends sensitive data to their server for malicious uses, posing as a package for formatting console messages.
 
 The fictious package gathers data from forms (using `document.forms`), cookies (`document.cookies`) and posts it to the server using `EventSource`. Use of these interfaces by such a module would normally be unthinkable. Surfacing this information to developers could ease their anxiety and allow them to make informed decisions when choosing a module to install.
 
